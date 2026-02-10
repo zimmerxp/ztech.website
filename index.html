@@ -1,100 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>ZTech Informática | Suporte Técnico</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ZTech Informática - Suporte técnico em computadores, notebooks, redes, impressoras e atendimento remoto.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZTech Informática | Suporte e Tecnologia</title>
+
   <style>
+    :root {
+      --primary: #00e5ff;
+      --secondary: #7c4dff;
+      --dark: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      background: linear-gradient(135deg, #020617, #020617, #0f172a);
+      color: var(--text);
+      line-height: 1.6;
     }
+
     header {
-      background: linear-gradient(135deg, #0ea5e9, #2563eb);
-      padding: 40px 20px;
+      padding: 80px 20px;
       text-align: center;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: #020617;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 36px;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
+
     header p {
-      font-size: 18px;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
+
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
     }
+
     h2 {
-      color: #38bdf8;
-    }
-    ul {
-      line-height: 1.8;
-    }
-    .cta {
-      background: #020617;
-      padding: 30px;
       text-align: center;
-      border-radius: 10px;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 14px;
+      border: 1px solid #1f2937;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(0,229,255,0.15);
+    }
+
+    .card span {
+      font-size: 2rem;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      color: var(--primary);
+    }
+
+    .about {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    .cta {
+      text-align: center;
       margin-top: 40px;
     }
+
     .cta a {
-      background: #22c55e;
+      display: inline-block;
+      padding: 15px 35px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
       color: #020617;
-      padding: 15px 25px;
-      text-decoration: none;
-      border-radius: 8px;
       font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: transform 0.3s;
     }
+
+    .cta a:hover {
+      transform: scale(1.05);
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      background: #020617;
-      margin-top: 40px;
+      padding: 30px 20px;
+      border-top: 1px solid #1f2937;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #9ca3af;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>ZTech Informática</h1>
-  <p>Suporte Técnico Presencial e Remoto</p>
-</header>
+  <header>
+    <h1>ZTech Informática</h1>
+    <p>Suporte Técnico • Tecnologia • Soluções Digitais</p>
+  </header>
 
-<section>
-  <h2>Serviços</h2>
-  <ul>
-    <li>Manutenção e formatação de computadores</li>
-    <li>Conserto de notebooks e PCs</li>
-    <li>Instalação de softwares e sistemas</li>
-    <li>Remoção de vírus e malware</li>
-    <li>Configuração de redes e Wi-Fi</li>
-    <li>Suporte técnico remoto</li>
-    <li>Conserto e configuração de impressoras</li>
-  </ul>
-</section>
+  <section>
+    <h2>Serviços</h2>
 
-<section>
-  <h2>Atendimento</h2>
-  <p>Atendimento presencial ou remoto, com diagnóstico rápido e orçamento sem compromisso.</p>
-</section>
+    <div class="services">
+      <div class="card"><span>🧠</span><h3>Diagnóstico de Hardware</h3><p>Identificação precisa de falhas e problemas físicos.</p></div>
+      <div class="card"><span>🛡️</span><h3>Remoção de Vírus e Malware</h3><p>Limpeza completa e proteção do sistema.</p></div>
+      <div class="card"><span>💾</span><h3>Instalação de Programas e Drivers</h3><p>Configuração correta e segura.</p></div>
+      <div class="card"><span>📡</span><h3>Configuração de Redes e Wi-Fi</h3><p>Internet estável e bem configurada.</p></div>
+      <div class="card"><span>☁️</span><h3>Backup e Recuperação de Dados</h3><p>Proteção e restauração de informações.</p></div>
+      <div class="card"><span>⚡</span><h3>Upgrade de Computadores</h3><p>Mais desempenho com SSD, RAM e ajustes.</p></div>
+      <div class="card"><span>📦</span><h3>Instalação de Softwares</h3><p>Programas essenciais para trabalho e estudo.</p></div>
+      <div class="card"><span>💻</span><h3>Conserto de Notebooks</h3><p>Reparos físicos e lógicos.</p></div>
+      <div class="card"><span>🖨️</span><h3>Conserto de Impressoras</h3><p>Manutenção e solução de falhas.</p></div>
+      <div class="card"><span>🔄</span><h3>Formatação de Computadores</h3><p>Sistema limpo, rápido e atualizado.</p></div>
+      <div class="card"><span>📊</span><h3>Análise e Consultoria</h3><p>Orientação técnica para decisões corretas.</p></div>
+      <div class="card"><span>🌐</span><h3>Desenvolvimento de Sites</h3><p>Sites profissionais e presença digital.</p></div>
+    </div>
+  </section>
 
-<section class="cta">
-  <h2>Entre em contato</h2>
-  <p>📞 <strong>31 98218-1396</strong></p>
-  <p>✉️ <strong>zimmerxp@hotmail.com</strong></p>
-  <br>
-  <a href="https://wa.me/5531982181396" target="_blank">Chamar no WhatsApp</a>
-</section>
+  <section class="about">
+    <h2>Sobre a ZTech</h2>
+    <p>
+      A ZTech Informática oferece soluções completas em tecnologia,
+      atendendo clientes residenciais e pequenos negócios.
+      Atendimento presencial ou remoto, com foco em agilidade,
+      transparência e resultado.
+    </p>
 
-<footer>
-  © 2026 ZTech Informática – Todos os direitos reservados
-</footer>
+    <div class="cta">
+      <a href="mailto:zimmerxp@hotmail.com">Solicitar Orçamento</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 • ZTech Informática • zimmerxp@hotmail.com
+  </footer>
 
 </body>
 </html>
