@@ -1,193 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>ZTech Informática | Suporte Técnico</title>
+  <meta charset="UTF-8" />
+  <title>ZTech Informática | Manutenção e Suporte Técnico</title>
+
+  <!-- SEO LOCAL -->
+  <meta name="description" content="ZTech Informática - Manutenção de computadores, formatação, remoção de vírus, redes Wi-Fi, notebooks e suporte técnico presencial ou remoto.">
+  <meta name="keywords" content="manutenção de computadores, formatação, conserto notebook, técnico informática, ZTech Informática">
+  <meta name="author" content="ZTech Informática">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --blue: #00bfff;
-      --blue-soft: #00e5ff;
-      --dark: #050b18;
-      --dark-card: #0b132b;
-      --border: #1e3a8a;
-      --text: #e5e7eb;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at top, #0a1a3a, #020617 70%);
-      color: var(--text);
-    }
-
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(180deg, #020617, #050b18);
-      border-bottom: 1px solid var(--border);
-    }
-
-    header img {
-      max-width: 280px;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 2.6rem;
-      color: var(--blue-soft);
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #c7d2fe;
-    }
-
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      color: var(--blue);
-      margin-bottom: 40px;
-      text-shadow: 0 0 12px rgba(0,191,255,.3);
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: linear-gradient(180deg, #0b132b, #020617);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 26px;
-      transition: all .3s ease;
-      box-shadow: 0 0 25px rgba(0,191,255,0.05);
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 35px rgba(0,191,255,0.25);
-    }
-
-    .card span {
-      font-size: 2.2rem;
-    }
-
-    .card h3 {
-      margin: 15px 0 10px;
-      color: var(--blue-soft);
-    }
-
-    .card p {
-      color: #cbd5f5;
-      font-size: 0.95rem;
-    }
-
-    .highlight {
-      background: linear-gradient(135deg, #020617, #0b132b);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 50px 30px;
-      text-align: center;
-      box-shadow: 0 0 40px rgba(0,191,255,.15);
-    }
-
-    .highlight p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: #dbeafe;
-    }
-
-    .cta {
-      margin-top: 35px;
-    }
-
-    .cta a {
-      display: inline-block;
-      padding: 16px 40px;
-      border-radius: 40px;
-      background: linear-gradient(135deg, #2563eb, #00e5ff);
-      color: #020617;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.1rem;
-      box-shadow: 0 0 25px rgba(0,191,255,.4);
-      transition: transform .3s ease;
-    }
-
-    .cta a:hover {
-      transform: scale(1.06);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid var(--border);
-      color: #9ca3af;
-      font-size: 0.9rem;
-      background: #020617;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <img src="assets/logo-ztech.png" alt="ZTech Informática">
-  <h1>ZTech Informática</h1>
-  <p>Manutenção • Formatação • Suporte Técnico em Geral</p>
-  <p>Atendimento presencial ou remoto</p>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <img src="logo.png" alt="ZTech Informática Logo" class="logo">
+    <h1>ZTech Informática</h1>
+    <p>Manutenção • Formatação • Suporte Técnico Geral</p>
+  </header>
 
-<section>
-  <h2>Serviços</h2>
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Atendimento Presencial ou Remoto</h2>
+    <p>Soluções rápidas e profissionais para seus problemas em informática</p>
+    <a href="https://wa.me/5531982181396" class="btn">Falar no WhatsApp</a>
+  </section>
 
-  <div class="services">
-    <div class="card"><span>🧠</span><h3>Diagnóstico de Hardware</h3><p>Identificação precisa de falhas físicas.</p></div>
-    <div class="card"><span>🛡️</span><h3>Remoção de Vírus e Malware</h3><p>Segurança e desempenho restaurados.</p></div>
-    <div class="card"><span>💾</span><h3>Instalação de Programas e Drivers</h3><p>Configuração correta e atualizada.</p></div>
-    <div class="card"><span>📡</span><h3>Redes e Wi-Fi</h3><p>Configuração e otimização de conexão.</p></div>
-    <div class="card"><span>☁️</span><h3>Backup e Recuperação</h3><p>Proteção e restauração de dados.</p></div>
-    <div class="card"><span>⚡</span><h3>Upgrade de Computadores</h3><p>SSD, memória e performance.</p></div>
-    <div class="card"><span>💻</span><h3>Conserto de Notebooks</h3><p>Reparo físico e lógico.</p></div>
-    <div class="card"><span>🖨️</span><h3>Conserto de Impressoras</h3><p>Solução de falhas e manutenção.</p></div>
-    <div class="card"><span>🔄</span><h3>Formatação</h3><p>Sistema limpo, rápido e seguro.</p></div>
-    <div class="card"><span>🌐</span><h3>Desenvolvimento de Sites</h3><p>Presença digital profissional.</p></div>
-  </div>
-</section>
+  <!-- SERVIÇOS -->
+  <section class="services">
+    <h2>💻 Nossos Serviços</h2>
 
-<section class="highlight">
-  <h2>Atendimento Profissional</h2>
-  <p>
-    A ZTech Informática oferece soluções completas em tecnologia,
-    com foco em agilidade, clareza e resultado.
-    Atendimento residencial e para pequenos negócios.
-  </p>
+    <div class="grid">
+      <div class="card">🛡️ Diagnóstico de Hardware</div>
+      <div class="card">💾 Remoção de Vírus e Malware</div>
+      <div class="card">📦 Instalação de Programas e Drivers</div>
+      <div class="card">📡 Configuração de Redes e Wi-Fi</div>
+      <div class="card">☁️ Backup e Recuperação de Dados</div>
+      <div class="card">⚡ Upgrade de Computadores</div>
+      <div class="card">💻 Conserto de Notebooks</div>
+      <div class="card">🖨️ Conserto de Impressoras</div>
+      <div class="card">🔄 Formatação de Computadores</div>
+      <div class="card">📊 Análise e Consultoria</div>
+      <div class="card">🌐 Desenvolvimento de Sites Profissionais</div>
+    </div>
+  </section>
 
-  <div class="cta">
-    <a href="mailto:zimmerxp@hotmail.com">Solicitar Orçamento</a>
-  </div>
-</section>
+  <!-- CONTATO -->
+  <section class="contact">
+    <h2>📞 Contato</h2>
+    <p><strong>WhatsApp:</strong> (31) 98218-1396</p>
+    <p><strong>Email:</strong> zimmerxp@hotmail.com</p>
+  </section>
 
-<footer>
-  © 2026 • ZTech Informática • zimmerxp@hotmail.com • (31) 98218-1396
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 ZTech Informática • Todos os direitos reservados</p>
+  </footer>
+
+  <!-- BOTÃO WHATSAPP -->
+  <a href="https://wa.me/5531982181396" class="whatsapp" target="_blank">
+    💬
+  </a>
 
 </body>
 </html>
