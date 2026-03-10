@@ -1,68 +1,399 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>ZTech Soluções em Tecnologia | Manutenção e Suporte Técnico</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO LOCAL -->
-  <meta name="description" content="ZTech Soluções em Tecnologia - Manutenção de computadores, formatação, remoção de vírus, redes Wi-Fi, notebooks e suporte técnico presencial ou remoto.">
-  <meta name="keywords" content="manutenção de computadores, formatação, conserto notebook, técnico informática, ZTech Informática">
-  <meta name="author" content="ZTech Soluções em Tecnologia">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZTech Informática | Suporte em TI para Empresas e Residências</title>
 
-  <link rel="stylesheet" href="style.css">
+<meta name="description" content="Técnico em informática, suporte em TI e manutenção de computadores para pequenas empresas e residências. Atendimento rápido em sua cidade." />
+<meta name="keywords" content="técnico em informática perto de mim, suporte TI empresas, manutenção computadores, suporte redes, criação de sites, consultoria TI" />
+<meta name="author" content="ZTech Informática" />
+
+<!-- SEO LOCAL -->
+<meta name="geo.region" content="BR-MG" />
+<meta name="geo.placename" content="Minas Gerais" />
+<meta name="robots" content="index, follow" />
+
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root{
+--bg:#050b14;
+--bg2:#081524;
+--card:#0b1c2d;
+--blue:#007bff;
+--blue2:#2ed6ff;
+--text:#e8f4ff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',Tahoma,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+
+/* ANIMATED CIRCUIT BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/circuit-board.png");
+animation:moveBg 60s linear infinite;
+opacity:.15;
+z-index:-1;
+}
+
+@keyframes moveBg{
+0%{background-position:0 0}
+100%{background-position:1000px 1000px}
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+/* MENU */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(5,11,20,0.95);
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(0,180,255,0.2);
+z-index:999;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+padding:15px 20px;
+}
+
+nav img{height:40px}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:var(--text);
+text-decoration:none;
+font-size:.95rem;
+}
+
+nav a:hover{color:var(--blue)}
+
+/* HERO */
+
+header{
+text-align:center;
+padding:150px 20px 90px;
+}
+
+header img{
+max-width:220px;
+margin-bottom:25px;
+}
+
+header h1{
+font-size:2.6rem;
+color:var(--blue);
+}
+
+header p{
+margin-top:10px;
+font-size:1.1rem;
+opacity:.9;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:30px;
+padding:16px 32px;
+border-radius:40px;
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+color:#000;
+font-weight:bold;
+text-decoration:none;
+transition:.3s;
+}
+
+.hero-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px rgba(0,180,255,.5);
+}
+
+section{
+padding:70px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:1.9rem;
+margin-bottom:40px;
+color:var(--blue);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:linear-gradient(180deg,#0c243d,var(--card));
+border:1px solid rgba(0,180,255,0.25);
+border-radius:16px;
+padding:30px;
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(0,180,255,.35);
+}
+
+.card i{
+font-size:28px;
+color:var(--blue2);
+margin-bottom:15px;
+}
+
+.card h3{
+color:var(--blue2);
+margin-bottom:12px;
+}
+
+.card ul{list-style:none}
+
+.card li{margin-bottom:8px}
+
+.card li::before{
+content:"✔ ";
+color:var(--blue);
+}
+
+.plan{text-align:center}
+
+.price{
+font-size:2rem;
+color:var(--blue);
+margin:15px 0;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:1.05rem;
+opacity:.9;
+}
+
+.cta{
+text-align:center;
+padding:70px 20px;
+background:linear-gradient(180deg,var(--bg2),#03070e);
+}
+
+.cta a{
+margin-top:20px;
+display:inline-block;
+padding:18px 36px;
+border-radius:40px;
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+color:#000;
+font-weight:bold;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#02060c;
+font-size:.9rem;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <img src="logo.png" alt="ZTech Informática Logo" class="logo">
-    <h1>ZTech Informática</h1>
-    <p>Manutenção • Formatação • Suporte Técnico Geral</p>
-  </header>
+<nav>
+<div class="nav-container">
+<img src="logo.png" alt="ZTech Informática">
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#empresas">Empresas</a></li>
+<li><a href="#planos">Planos</a></li>
+<li><a href="#pessoal">Residencial</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</div>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Atendimento Presencial ou Remoto</h2>
-    <p>Soluções rápidas e profissionais para seus problemas em informática</p>
-    <a href="https://wa.me/5531973595240 class="btn">Falar no WhatsApp</a>
-  </section>
+<header id="inicio">
+<img src="logo.png" alt="ZTech Informática">
+<h1>Suporte em Tecnologia</h1>
+<p>Suporte em Tecnologia para empresas e residências • soluções profissionais em TI</p>
+<a class="hero-btn" href="https://wa.me/5531973595240" target="_blank">Solicitar Orçamento</a>
+</header>
 
-  <!-- SERVIÇOS -->
-  <section class="services">
-    <h2>💻 Nossos Serviços</h2>
+<section id="empresas" class="container">
+<h2 class="section-title">Suporte para Pequenas Empresas</h2>
+<div class="grid">
 
-    <div class="grid">
-      <div class="card">🛡️ Diagnóstico de Hardware</div>
-      <div class="card">💾 Remoção de Vírus e Malware</div>
-      <div class="card">📦 Instalação de Programas e Drivers</div>
-      <div class="card">📡 Configuração de Redes e Wi-Fi</div>
-      <div class="card">☁️ Backup e Recuperação de Dados</div>
-      <div class="card">⚡ Upgrade de Computadores</div>
-      <div class="card">💻 Conserto de Notebooks</div>
-      <div class="card">🖨️ Conserto de Impressoras</div>
-      <div class="card">🔄 Formatação de Computadores</div>
-      <div class="card">📊 Análise e Consultoria</div>
-      <div class="card">🌐 Desenvolvimento de Sites Profissionais</div>
-    </div>
-  </section>
+<div class="card">
+<i class="fa-solid fa-network-wired"></i>
+<h3>Infraestrutura de TI</h3>
+<ul>
+<li>Configuração de redes</li>
+<li>Wi‑Fi corporativo</li>
+<li>Servidor local ou nuvem</li>
+<li>Segurança de rede</li>
+<li>Monitoramento</li>
+</ul>
+</div>
 
-  <!-- CONTATO -->
-  <section class="contact">
-    <h2>📞 Contato</h2>
-    <p><strong>WhatsApp:</strong> (31) 97359-5240</p>
-    <p><strong>Email:</strong> zimmerxp@hotmail.com</p>
-  </section>
+<div class="card">
+<i class="fa-solid fa-server"></i>
+<h3>Gestão de TI</h3>
+<ul>
+<li>Manutenção preventiva</li>
+<li>Suporte remoto</li>
+<li>Backup automático</li>
+<li>Consultoria em TI</li>
+<li>Monitoramento de PCs</li>
+</ul>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 ZTech Informática • Todos os direitos reservados</p>
-  </footer>
+<div class="card">
+<i class="fa-solid fa-cloud"></i>
+<h3>Soluções Cloud</h3>
+<ul>
+<li>Microsoft 365</li>
+<li>Backup em nuvem</li>
+<li>Migração de servidores</li>
+<li>Segurança de dados</li>
+</ul>
+</div>
 
-  <!-- BOTÃO WHATSAPP -->
-  <a href="https://wa.me/553173595240" class="whatsapp" target="_blank">
-    💬
-  </a>
+</div>
+</section>
+
+<section id="planos" class="container">
+<h2 class="section-title">Planos de Suporte Mensal</h2>
+<div class="grid">
+
+<div class="card plan">
+<h3>Plano Básico</h3>
+<p class="price">Sob consulta</p>
+<ul>
+<li>Suporte remoto</li>
+<li>Monitoramento básico</li>
+<li>Atualizações</li>
+</ul>
+</div>
+
+<div class="card plan">
+<h3>Plano Empresa</h3>
+<p class="price">Sob consulta</p>
+<ul>
+<li>Suporte completo</li>
+<li>Visitas técnicas</li>
+<li>Gestão infraestrutura</li>
+<li>Segurança</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section id="pessoal" class="container">
+<h2 class="section-title">Atendimento Técnico Residencial</h2>
+<div class="grid">
+
+<div class="card">
+<i class="fa-solid fa-computer"></i>
+<h3>Computadores</h3>
+<ul>
+<li>Remoção de vírus</li>
+<li>Formatação Windows</li>
+<li>Upgrade SSD e memória</li>
+<li>Instalação programas</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-wifi"></i>
+<h3>Outros Serviços</h3>
+<ul>
+<li>Configuração Wi‑Fi</li>
+<li>Instalação impressoras</li>
+<li>Backup arquivos</li>
+<li>Criação de sites</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section id="sobre" class="container">
+<h2 class="section-title">Sobre a ZTech</h2>
+<p class="about">
+A ZTech Informática oferece suporte técnico especializado para pequenas empresas e usuários domésticos.
+Prestamos serviços de manutenção, contratos de suporte mensal, redes, segurança e consultoria em TI.
+</p>
+</section>
+
+<section id="contato" class="cta">
+<h2>Precisa de Suporte em TI?</h2>
+<p>Fale agora com um especialista em tecnologia.</p>
+<a href="https://wa.me/5531973595240" target="_blank">Falar no WhatsApp</a>
+</section>
+
+<footer>
+ZTech Informática © 2026 • Suporte Profissional em Tecnologia da Informação
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5531973595240" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
 </body>
 </html>
