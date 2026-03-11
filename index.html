@@ -1,399 +1,357 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>ZTech Informática | Suporte em TI para Empresas e Residências</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Técnico em informática, suporte em TI e manutenção de computadores para pequenas empresas e residências. Atendimento rápido em sua cidade." />
-<meta name="keywords" content="técnico em informática perto de mim, suporte TI empresas, manutenção computadores, suporte redes, criação de sites, consultoria TI" />
-<meta name="author" content="ZTech Informática" />
+<title>ZTech Informática | Suporte em Tecnologia</title>
 
-<!-- SEO LOCAL -->
-<meta name="geo.region" content="BR-MG" />
-<meta name="geo.placename" content="Minas Gerais" />
-<meta name="robots" content="index, follow" />
+<meta name="description" content="Suporte em Tecnologia para empresas e residências. Soluções profissionais em TI, redes, servidores e manutenção de computadores.">
+<meta name="keywords" content="suporte TI, suporte tecnologia empresas, manutenção computadores, suporte redes, TI empresarial">
+<meta name="author" content="ZTech Informática">
 
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
-:root{
---bg:#050b14;
---bg2:#081524;
---card:#0b1c2d;
---blue:#007bff;
---blue2:#2ed6ff;
---text:#e8f4ff;
-}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',Tahoma,sans-serif;
-scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:var(--bg);
-color:var(--text);
-overflow-x:hidden;
-}
-
-/* ANIMATED CIRCUIT BACKGROUND */
-
-body::before{
-content:"";
-position:fixed;
-width:100%;
-height:100%;
-background:url("https://www.transparenttextures.com/patterns/circuit-board.png");
-animation:moveBg 60s linear infinite;
-opacity:.15;
-z-index:-1;
-}
-
-@keyframes moveBg{
-0%{background-position:0 0}
-100%{background-position:1000px 1000px}
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:20px;
+background:#0b0f19;
+color:white;
 }
 
 /* MENU */
 
-nav{
+header{
 position:fixed;
-top:0;
 width:100%;
-background:rgba(5,11,20,0.95);
-backdrop-filter:blur(8px);
-border-bottom:1px solid rgba(0,180,255,0.2);
+top:0;
+background:#0b0f19ee;
+backdrop-filter:blur(10px);
 z-index:999;
 }
 
-.nav-container{
+nav{
+max-width:1200px;
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-max-width:1200px;
-margin:auto;
-padding:15px 20px;
+padding:15px;
 }
 
-nav img{height:40px}
+.logo{
+font-size:26px;
+font-weight:600;
+color:#3fa9ff;
+}
 
 nav ul{
 display:flex;
 list-style:none;
-gap:25px;
+gap:30px;
 }
 
 nav a{
-color:var(--text);
+color:white;
 text-decoration:none;
-font-size:.95rem;
-}
-
-nav a:hover{color:var(--blue)}
-
-/* HERO */
-
-header{
-text-align:center;
-padding:150px 20px 90px;
-}
-
-header img{
-max-width:220px;
-margin-bottom:25px;
-}
-
-header h1{
-font-size:2.6rem;
-color:var(--blue);
-}
-
-header p{
-margin-top:10px;
-font-size:1.1rem;
-opacity:.9;
-}
-
-.hero-btn{
-display:inline-block;
-margin-top:30px;
-padding:16px 32px;
-border-radius:40px;
-background:linear-gradient(135deg,var(--blue),var(--blue2));
-color:#000;
-font-weight:bold;
-text-decoration:none;
+font-weight:400;
 transition:.3s;
 }
 
-.hero-btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 25px rgba(0,180,255,.5);
+nav a:hover{
+color:#ff8c2b;
 }
 
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(120deg,#0b0f19,#16213e,#0b0f19);
+background-size:300% 300%;
+animation:gradient 10s ease infinite;
+padding:20px;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+color:#3fa9ff;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+color:#d0d0d0;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:30px;
+background:linear-gradient(90deg,#3fa9ff,#ff8c2b);
+border:none;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+text-decoration:none;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SEÇÕES */
+
 section{
-padding:70px 20px;
+padding:100px 20px;
+max-width:1200px;
+margin:auto;
 }
 
 .section-title{
 text-align:center;
-font-size:1.9rem;
-margin-bottom:40px;
-color:var(--blue);
+font-size:34px;
+margin-bottom:50px;
 }
 
-.grid{
+/* CARDS */
+
+.cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
-background:linear-gradient(180deg,#0c243d,var(--card));
-border:1px solid rgba(0,180,255,0.25);
-border-radius:16px;
+background:#141a2a;
 padding:30px;
-transition:.35s;
+border-radius:12px;
+transition:.4s;
+border:1px solid transparent;
 }
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 0 30px rgba(0,180,255,.35);
-}
-
-.card i{
-font-size:28px;
-color:var(--blue2);
-margin-bottom:15px;
+border:1px solid #3fa9ff;
+box-shadow:0 0 20px #3fa9ff66;
 }
 
 .card h3{
-color:var(--blue2);
-margin-bottom:12px;
+margin-bottom:15px;
 }
 
-.card ul{list-style:none}
+.card ul{
+list-style:none;
+}
 
-.card li{margin-bottom:8px}
+.card li{
+margin:10px 0;
+}
 
 .card li::before{
-content:"✔ ";
-color:var(--blue);
+content:"✔";
+color:#ff8c2b;
+margin-right:8px;
 }
 
-.plan{text-align:center}
+/* SOBRE */
 
-.price{
-font-size:2rem;
-color:var(--blue);
-margin:15px 0;
+.sobre{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
-.about{
-max-width:900px;
-margin:auto;
+.sobre img{
+width:100%;
+border-radius:12px;
+}
+
+/* CONTATO */
+
+.contato{
 text-align:center;
-font-size:1.05rem;
-opacity:.9;
-}
-
-.cta{
-text-align:center;
-padding:70px 20px;
-background:linear-gradient(180deg,var(--bg2),#03070e);
-}
-
-.cta a{
-margin-top:20px;
-display:inline-block;
-padding:18px 36px;
-border-radius:40px;
-background:linear-gradient(135deg,var(--blue),var(--blue2));
-color:#000;
-font-weight:bold;
-text-decoration:none;
 }
 
 footer{
 text-align:center;
-padding:25px;
-background:#02060c;
-font-size:.9rem;
+padding:30px;
+background:#0b0f19;
+color:#999;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:#fff;
-width:60px;
-height:60px;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
 border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
+font-size:22px;
 text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 </style>
+
 </head>
 
 <body>
 
+<header>
 <nav>
-<div class="nav-container">
-<img src="logo.png" alt="ZTech Informática">
+
+<div class="logo">ZTech</div>
+
 <ul>
 <li><a href="#inicio">Início</a></li>
-<li><a href="#empresas">Empresas</a></li>
-<li><a href="#planos">Planos</a></li>
-<li><a href="#pessoal">Residencial</a></li>
 <li><a href="#sobre">Sobre</a></li>
+<li><a href="#planos">Planos</a></li>
 <li><a href="#contato">Contato</a></li>
 </ul>
-</div>
-</nav>
 
-<header id="inicio">
-<img src="logo.png" alt="ZTech Informática">
-<h1>Suporte em Tecnologia</h1>
-<p>Suporte em Tecnologia para empresas e residências • soluções profissionais em TI</p>
-<a class="hero-btn" href="https://wa.me/5531973595240" target="_blank">Solicitar Orçamento</a>
+</nav>
 </header>
 
-<section id="empresas" class="container">
-<h2 class="section-title">Suporte para Pequenas Empresas</h2>
-<div class="grid">
 
-<div class="card">
-<i class="fa-solid fa-network-wired"></i>
-<h3>Infraestrutura de TI</h3>
-<ul>
-<li>Configuração de redes</li>
-<li>Wi‑Fi corporativo</li>
-<li>Servidor local ou nuvem</li>
-<li>Segurança de rede</li>
-<li>Monitoramento</li>
-</ul>
-</div>
+<!-- HERO -->
 
-<div class="card">
-<i class="fa-solid fa-server"></i>
-<h3>Gestão de TI</h3>
-<ul>
-<li>Manutenção preventiva</li>
-<li>Suporte remoto</li>
-<li>Backup automático</li>
-<li>Consultoria em TI</li>
-<li>Monitoramento de PCs</li>
-</ul>
-</div>
+<section id="inicio" class="hero">
 
-<div class="card">
-<i class="fa-solid fa-cloud"></i>
-<h3>Soluções Cloud</h3>
-<ul>
-<li>Microsoft 365</li>
-<li>Backup em nuvem</li>
-<li>Migração de servidores</li>
-<li>Segurança de dados</li>
-</ul>
-</div>
+<div>
+
+<h1>Suporte em Tecnologia</h1>
+
+<p>Soluções profissionais em TI para empresas e residências</p>
+
+<a class="btn" href="https://wa.me/5531973595240">
+Solicitar Orçamento
+</a>
 
 </div>
+
 </section>
 
-<section id="planos" class="container">
-<h2 class="section-title">Planos de Suporte Mensal</h2>
-<div class="grid">
 
-<div class="card plan">
-<h3>Plano Básico</h3>
-<p class="price">Sob consulta</p>
-<ul>
-<li>Suporte remoto</li>
-<li>Monitoramento básico</li>
-<li>Atualizações</li>
-</ul>
-</div>
+<!-- SOBRE -->
 
-<div class="card plan">
-<h3>Plano Empresa</h3>
-<p class="price">Sob consulta</p>
-<ul>
-<li>Suporte completo</li>
-<li>Visitas técnicas</li>
-<li>Gestão infraestrutura</li>
-<li>Segurança</li>
-</ul>
-</div>
+<section id="sobre">
 
-</div>
-</section>
-
-<section id="pessoal" class="container">
-<h2 class="section-title">Atendimento Técnico Residencial</h2>
-<div class="grid">
-
-<div class="card">
-<i class="fa-solid fa-computer"></i>
-<h3>Computadores</h3>
-<ul>
-<li>Remoção de vírus</li>
-<li>Formatação Windows</li>
-<li>Upgrade SSD e memória</li>
-<li>Instalação programas</li>
-</ul>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-wifi"></i>
-<h3>Outros Serviços</h3>
-<ul>
-<li>Configuração Wi‑Fi</li>
-<li>Instalação impressoras</li>
-<li>Backup arquivos</li>
-<li>Criação de sites</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<section id="sobre" class="container">
 <h2 class="section-title">Sobre a ZTech</h2>
-<p class="about">
-A ZTech Informática oferece suporte técnico especializado para pequenas empresas e usuários domésticos.
-Prestamos serviços de manutenção, contratos de suporte mensal, redes, segurança e consultoria em TI.
+
+<div class="sobre">
+
+<div>
+
+<p>
+A ZTech oferece suporte em tecnologia com foco em eficiência,
+segurança e confiabilidade para empresas e usuários residenciais.
 </p>
+
+<br>
+
+<p>
+Trabalhamos com manutenção de computadores, redes,
+infraestrutura de TI e suporte técnico especializado.
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
+</div>
+
 </section>
 
-<section id="contato" class="cta">
-<h2>Precisa de Suporte em TI?</h2>
-<p>Fale agora com um especialista em tecnologia.</p>
-<a href="https://wa.me/5531973595240" target="_blank">Falar no WhatsApp</a>
+
+<!-- PLANOS -->
+
+<section id="planos">
+
+<h2 class="section-title">Planos de Suporte</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Plano Básico</h3>
+
+<ul>
+<li>Suporte remoto</li>
+<li>Manutenção preventiva</li>
+<li>Atualizações de sistema</li>
+<li>Suporte a computadores</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Plano Empresa</h3>
+
+<ul>
+<li>Suporte prioritário</li>
+<li>Monitoramento de rede</li>
+<li>Gestão de TI</li>
+<li>Suporte servidores</li>
+<li>Consultoria tecnológica</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTATO -->
+
+<section id="contato" class="contato">
+
+<h2 class="section-title">Contato</h2>
+
+<p>Entre em contato para solicitar um orçamento.</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/5531973595240">
+Falar no WhatsApp
+</a>
+
 </section>
 
 <footer>
-ZTech Informática © 2026 • Suporte Profissional em Tecnologia da Informação
+
+© 2026 ZTech Informática
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5531973595240" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+<a class="whatsapp" href="https://wa.me/5531973595240">
+💬
+</a>
 
 </body>
 </html>
