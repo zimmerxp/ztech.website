@@ -21,10 +21,10 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ztech.website/" />
+  <meta property="og:url" content="https://ztechinformatica.com.br/" />
   <meta property="og:title" content="ZTech Informática | Suporte em TI — Vespasiano MG" />
   <meta property="og:description" content="Suporte profissional em TI para empresas e residências em Vespasiano e região. Infraestrutura, cloud, manutenção e suporte remoto." />
-  <meta property="og:image" content="https://ztech.website/og-image.jpg" />
+  <meta property="og:image" content="https://ztechinformatica.com.br/og-image.jpg" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="ZTech Informática" />
 
@@ -32,9 +32,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZTech Informática | Suporte em TI — Vespasiano MG" />
   <meta name="twitter:description" content="Suporte profissional em TI para empresas e residências em Vespasiano e região." />
-  <meta name="twitter:image" content="https://ztech.website/og-image.jpg" />
+  <meta name="twitter:image" content="https://ztechinformatica.com.br/og-image.jpg" />
 
-  <link rel="canonical" href="https://ztech.website/" />
+  <link rel="canonical" href="https://ztechinformatica.com.br/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -74,7 +74,7 @@
       display:flex;align-items:center;justify-content:space-between;height:72px
     }
     .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;z-index:201}
-    .nav-logo img{height:100px}     /*TAMANHO DA LOGO*/
+    .nav-logo img{height:44px}
     nav ul{display:flex;gap:8px;list-style:none}
     nav ul a{
       color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;
@@ -151,11 +151,18 @@
       margin-bottom:30px;animation:fadeUp .6s ease both
     }
     h1{
-      font-family:var(--font-display);font-size:clamp(3.6rem,7vw,5.5rem);  /*TAMANHO DA FONTE DO TITULO */
+      font-family:var(--font-display);font-size:clamp(2.6rem,6vw,4.5rem);
       font-weight:800;line-height:1.08;letter-spacing:-.03em;color:#fff;
       animation:fadeUp .6s .1s ease both
     }
-    h1 .hl1{-webkit-text-stroke:2px var(--accent);-webkit-text-fill-color:transparent;color:transparent}
+    @keyframes pulse-glow{
+      0%,100%{text-shadow:0 0 0 transparent;-webkit-text-stroke-color:var(--accent)}
+      50%{text-shadow:0 0 18px rgba(0,220,255,.65),0 0 42px rgba(0,220,255,.25);-webkit-text-stroke-color:#fff}
+    }
+    h1 .hl1{
+      -webkit-text-stroke:2px var(--accent);-webkit-text-fill-color:transparent;color:transparent;
+      animation:pulse-glow 2.4s ease-in-out infinite
+    }
     h1 .hl2{background:linear-gradient(135deg,var(--accent2),#ffb347);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .hero-sub{margin-top:20px;font-size:1.1rem;color:var(--muted);line-height:1.7;animation:fadeUp .6s .2s ease both}
     .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px;animation:fadeUp .6s .3s ease both}
@@ -303,6 +310,56 @@
     .res-card ul li{font-size:.87rem;color:rgba(200,220,255,.65);display:flex;align-items:center;gap:10px}
     .res-card ul li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent2);flex-shrink:0}
 
+    /* PROJETOS */
+    .proj-section{padding:100px 24px;background:var(--bg2)}
+    .proj-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:28px;max-width:1100px;margin:auto
+    }
+    .proj-card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:20px;overflow:hidden;
+      transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+      display:flex;flex-direction:column
+    }
+    .proj-card:hover{
+      transform:translateY(-8px);
+      border-color:var(--border-bright);
+      box-shadow:0 20px 60px rgba(0,220,255,.12)
+    }
+    .proj-thumb{
+      width:100%;height:180px;background:linear-gradient(135deg,var(--bg2),#0d1e35);
+      display:flex;align-items:center;justify-content:center;
+      font-size:2.8rem;position:relative;overflow:hidden
+    }
+    .proj-thumb::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(0deg,rgba(8,15,30,.9) 0%,transparent 60%)
+    }
+    .proj-thumb-icon{position:relative;z-index:1}
+    .proj-thumb.thumb-green{background:linear-gradient(135deg,#061a10,#0d2b1a)}
+    .proj-thumb.thumb-blue{background:linear-gradient(135deg,#060d1a,#091a30)}
+    .proj-thumb.thumb-purple{background:linear-gradient(135deg,#0d0915,#180d2e)}
+    .proj-body{padding:24px;flex:1;display:flex;flex-direction:column;gap:10px}
+    .proj-tag{
+      display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;
+      padding:4px 10px;border-radius:50px;
+      background:rgba(0,220,255,.1);color:var(--accent);border:1px solid rgba(0,220,255,.2)
+    }
+    .proj-tag.tag-orange{background:rgba(255,92,26,.1);color:var(--accent2);border-color:rgba(255,92,26,.2)}
+    .proj-tag.tag-purple{background:rgba(123,97,255,.1);color:var(--accent3);border-color:rgba(123,97,255,.2)}
+    .proj-body h3{font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+    .proj-body p{font-size:.9rem;color:var(--muted);line-height:1.6;flex:1}
+    .proj-link{
+      display:inline-flex;align-items:center;gap:8px;margin-top:8px;
+      color:var(--accent);font-size:.85rem;font-weight:600;text-decoration:none;
+      transition:gap .2s
+    }
+    .proj-link.link-orange{color:var(--accent2)}
+    .proj-link.link-purple{color:var(--accent3)}
+    .proj-link:hover{gap:14px}
+    .proj-link i{font-size:.75rem}
+
     /* CTA */
     .cta-section{padding:80px 24px;background:var(--bg)}
     .cta-box{
@@ -371,7 +428,7 @@
     "@type":"LocalBusiness",
     "name":"ZTech Informática",
     "telephone":"+55-31-97359-5240",
-    "url":"https://ztech.website",
+    "url":"https://ztechinformatica.com.br",
     "areaServed":["Vespasiano MG","Santa Luzia MG","Lagoa Santa MG","Belo Horizonte MG"],
     "address":{"@type":"PostalAddress","addressLocality":"Vespasiano","addressRegion":"MG","addressCountry":"BR"},
     "description":"Suporte em tecnologia e gestão de TI para pequenas empresas e residências em Vespasiano e região.",
@@ -392,7 +449,8 @@
       <li><a href="#empresas">Empresas</a></li>
       <li><a href="#planos">Planos</a></li>
       <li><a href="#depoimentos">Depoimentos</a></li>
-      <li><a href="#pessoal">Residencial</a></li>
+      <li><a href="#pessoal">Casa & Família</a></li>
+      <li><a href="#projetos">Projetos</a></li>
       <li><a href="https://wa.me/5531973595240" target="_blank" rel="noopener" class="nav-cta" aria-label="Falar no WhatsApp">WhatsApp</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -407,7 +465,8 @@
   <a href="#empresas">Empresas</a>
   <a href="#planos">Planos</a>
   <a href="#depoimentos">Depoimentos</a>
-  <a href="#pessoal">Residencial</a>
+  <a href="#pessoal">Casa & Família</a>
+  <a href="#projetos">Projetos</a>
   <div class="mob-divider"></div>
   <a href="https://wa.me/5531973595240" target="_blank" rel="noopener" class="mob-cta">
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Falar no WhatsApp
@@ -418,18 +477,18 @@
 <section id="inicio">
   <div class="hero-bg"><div class="hero-grid"></div></div>
   <div class="hero-content">
-    <div class="hero-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Vespasiano e Região · MG</div>
-    <h1>Tecnologia que <span class="hl1">impulsiona</span><br>o seu <span class="hl2">negócio</span></h1>
+    <div class="hero-badge"><i class="fa-solid fa-house-laptop" aria-hidden="true"></i> Empresas · Residências · Vespasiano MG</div>
+    <h1>Tecnologia que <span class="hl1">impulsiona</span><br>o seu <span class="hl2">dia a dia</span></h1>
     <p class="hero-sub">
-      Suporte profissional em TI para pequenas empresas e residências.<br>
-      Infraestrutura, segurança, cloud e manutenção — tudo em um único parceiro.
+      Suporte em TI para <strong style="color:var(--text)">pequenas empresas e residências</strong> em Vespasiano e região.<br>
+      Do computador de casa ao servidor da sua empresa — atendimento rápido, orçamento sem compromisso.
     </p>
     <div class="hero-actions">
       <a class="btn-primary" href="https://wa.me/5531973595240" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Solicitar Orçamento
       </a>
-      <a class="btn-secondary" href="#empresas">
-        Ver serviços <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+      <a class="btn-secondary" href="#pessoal">
+        Casa & Família <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
       </a>
     </div>
     <div class="hero-stats">
@@ -437,9 +496,13 @@
         <div class="stat-num">10<span>+</span></div>
         <div class="stat-label">Anos de experiência</div>
       </div>
-        <div class="stat-item">
-       <div class="stat-num">70<span>+</span></div>
-        <div class="stat-label">Clientes atendidos</div>
+      <div class="stat-item">
+        <div class="stat-num">200<span>+</span></div>
+        <div class="stat-label">Atendimentos realizados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span>🏠</span></div>
+        <div class="stat-label">Casa & empresa</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">24<span>h</span></div>
@@ -501,8 +564,9 @@
 <section id="planos" class="wrap">
   <div class="container">
     <div class="section-head reveal">
-      <div class="label">Planos e preços</div>
-      <h2 class="section-title">Preço justo,<br>suporte de verdade</h2>
+      <div class="label">Planos de suporte</div>
+      <h2 class="section-title">A solução certa<br>para o seu perfil</h2>
+      <p class="section-sub">Cada caso é único. Entre em contato e receba uma proposta personalizada sem compromisso.</p>
     </div>
     <div class="plans-grid">
 
@@ -510,57 +574,57 @@
       <div class="plan-card reveal reveal-delay-1">
         <h3>Básico</h3>
         <p class="plan-sub">Microempresas e autônomos com até 3 computadores.</p>
-        <div class="price-block warm">
-          <div class="price-main">R$&thinsp;280 <span>/mês</span></div>
+        <div class="price-block warm" style="text-align:center;padding:20px 16px">
+          <div style="font-size:1.1rem;font-weight:700;color:var(--accent2);margin-bottom:6px">Sob consulta</div>
+          <div style="font-size:.82rem;color:var(--muted)">Proposta personalizada conforme sua necessidade</div>
         </div>
         <ul class="plan-features">
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Suporte remoto — até 4h/mês</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Suporte remoto mensal</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Monitoramento básico de PCs</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Atualizações de sistema</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Antivírus gerenciado</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Atendimento em horário comercial</li>
         </ul>
-        <a class="plan-btn outlined" href="https://wa.me/5531973595240" target="_blank" rel="noopener">Solicitar proposta</a>
-        <p class="plan-note">* Valor pode variar conforme necessidade</p>
+        <a class="plan-btn outlined" href="https://wa.me/5531973595240?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20B%C3%A1sico" target="_blank" rel="noopener">Quero uma proposta</a>
       </div>
 
       <!-- Empresa -->
       <div class="plan-card featured reveal reveal-delay-2">
         <div class="plan-tag">Mais popular</div>
         <h3>Empresa</h3>
-        <p class="plan-sub">Empresas com 4 a 10 computadores que precisam de suporte completo.</p>
-        <div class="price-block">
-          <div class="price-main">R$&thinsp;580 <span>/mês</span></div>
+        <p class="plan-sub">Empresas com 4 a 15 computadores que precisam de suporte completo.</p>
+        <div class="price-block" style="text-align:center;padding:20px 16px">
+          <div style="font-size:1.1rem;font-weight:700;color:var(--accent);margin-bottom:6px">Sob consulta</div>
+          <div style="font-size:.82rem;color:var(--muted)">Proposta personalizada conforme porte e necessidade</div>
         </div>
         <ul class="plan-features">
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Suporte remoto ilimitado</li>
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> 1 visita técnica presencial/mês</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Visitas técnicas presenciais</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Gestão de infraestrutura</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Backup em nuvem automatizado</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Segurança avançada</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Relatório mensal de TI</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Atendimento prioritário</li>
         </ul>
-        <a class="plan-btn solid" href="https://wa.me/5531973595240" target="_blank" rel="noopener">Solicitar proposta</a>
-        <p class="plan-note">* Referência para até 10 PCs. Consulte para mais</p>
+        <a class="plan-btn solid" href="https://wa.me/5531973595240?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20Empresa" target="_blank" rel="noopener">Quero uma proposta</a>
       </div>
 
       <!-- Avulso -->
       <div class="plan-card reveal reveal-delay-3">
-        <h3>Avulso/Residencial</h3>
+        <h3>Avulso</h3>
         <p class="plan-sub">Atendimento pontual sem mensalidade, residencial ou empresarial.</p>
-        <div class="price-block warm">
-          <div class="price-main">R$&thinsp;110 <span>/ Visita</span></div>
+        <div class="price-block warm" style="text-align:center;padding:20px 16px">
+          <div style="font-size:1.1rem;font-weight:700;color:var(--accent2);margin-bottom:6px">Sob consulta</div>
+          <div style="font-size:.82rem;color:var(--muted)">Orçamento rápido pelo WhatsApp</div>
         </div>
         <ul class="plan-features">
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Formatação Windows — R$ Consulte valor</li>
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Remoção de vírus — R$ Consulte valor</li>
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Instalação de rede Wi-Fi — R$ Consulte valor</li>
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Upgrade SSD/RAM — R$ Consulte valor</li>
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Suporte remoto avulso — R$ Consulte valor/h</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Formatação Windows</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Remoção de vírus</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Instalação de rede Wi-Fi</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Upgrade SSD/RAM</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Suporte remoto avulso</li>
         </ul>
-        <a class="plan-btn outlined" href="https://wa.me/5531973595240" target="_blank" rel="noopener">Consulte Valores</a>
-        <p class="plan-note">* Poder incluir deslocamento em Vespasiano. Consulte outras cidades</p>
+        <a class="plan-btn outlined" href="https://wa.me/5531973595240?text=Ol%C3%A1%2C%20preciso%20de%20um%20atendimento%20avulso" target="_blank" rel="noopener">Solicitar atendimento</a>
       </div>
 
     </div>
@@ -632,7 +696,7 @@
       </div>
 
     </div>
-    <div class="t-placeholder" role="note"></div>
+    <div class="t-placeholder" role="note">ℹ️ Depoimentos ilustrativos — substitua pelos reais quando disponíveis</div>
   </div>
 </section>
 
@@ -640,10 +704,32 @@
 <section id="pessoal" class="wrap">
   <div class="container">
     <div class="section-head reveal">
-      <div class="label">Atendimento residencial</div>
-      <h2 class="section-title">Seu computador em<br>boas mãos</h2>
-      <p class="section-sub">Atendimento técnico rápido para resolver os problemas do seu computador ou rede doméstica.</p>
+      <div class="label">Casa & Família</div>
+      <h2 class="section-title">Tecnologia que funciona<br><span class="hl2">em casa também</span></h2>
+      <p class="section-sub">Computador lento, internet travando, vírus, impressora sem funcionar — a gente resolve. Atendimento presencial em Vespasiano ou remoto de onde você estiver.</p>
     </div>
+
+    <!-- destaque residencial -->
+    <div class="res-highlight reveal" style="
+      background:linear-gradient(135deg,rgba(0,220,255,.06),rgba(123,97,255,.06));
+      border:1px solid rgba(0,220,255,.18);border-radius:20px;
+      padding:32px 36px;margin-bottom:36px;
+      display:flex;align-items:center;gap:24px;flex-wrap:wrap
+    ">
+      <div style="font-size:2.8rem;line-height:1">🏠</div>
+      <div style="flex:1;min-width:220px">
+        <div style="font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:6px">
+          Atendimento domiciliar em Vespasiano e região
+        </div>
+        <p style="font-size:.9rem;color:var(--muted);line-height:1.6;margin:0">
+          Resolvemos no local ou levamos para bancada. Orçamento rápido pelo WhatsApp, sem mensalidade, sem contrato.
+        </p>
+      </div>
+      <a class="btn-primary" href="https://wa.me/5531973595240?text=Ol%C3%A1%2C%20gostaria%20de%20um%20atendimento%20residencial" target="_blank" rel="noopener" style="white-space:nowrap;flex-shrink:0">
+        <i class="fa-brands fa-whatsapp"></i> Agendar visita
+      </a>
+    </div>
+
     <div class="residential-grid">
       <div class="res-card reveal reveal-delay-1">
         <div class="res-icon"><i class="fa-solid fa-computer" aria-hidden="true"></i></div>
@@ -677,16 +763,75 @@
         </ul>
       </div>
       <div class="res-card reveal reveal-delay-4">
-        <div class="res-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
-        <h3>Web & Outros</h3>
+        <div class="res-icon"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></div>
+        <h3>Celular & Dispositivos</h3>
         <ul>
-          <li>Criação de sites</li>
+          <li>Configuração de smartphone</li>
+          <li>Transferência de dados</li>
           <li>Configuração de e-mail</li>
-          <li>Suporte remoto domiciliar</li>
-          <li>Atendimento presencial</li>
+          <li>Suporte remoto via celular</li>
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="proj-section">
+  <div class="section-header reveal" style="text-align:center;margin-bottom:56px;max-width:1100px;margin-left:auto;margin-right:auto">
+    <div class="label" style="justify-content:center;margin-bottom:16px;">O que já construímos</div>
+    <h2 class="section-title">Projetos <span class="hl2">Realizados</span></h2>
+    <p style="color:var(--muted);max-width:560px;margin:14px auto 0;font-size:1rem;line-height:1.7">
+      Sites e sistemas desenvolvidos para clientes reais — do design ao ar, com SEO, desempenho e identidade visual.
+    </p>
+  </div>
+  <div class="proj-grid">
+
+    <!-- Pai e Filho -->
+    <div class="proj-card reveal">
+      <div class="proj-thumb thumb-blue">
+        <span class="proj-thumb-icon">🔧</span>
+      </div>
+      <div class="proj-body">
+        <span class="proj-tag">Assistência Técnica</span>
+        <h3>Pai e Filho Assistência Técnica</h3>
+        <p>Site institucional moderno para empresa de assistência técnica local. Redesign completo com SEO otimizado, integração com Google AdSense e layout responsivo para captação de clientes na região.</p>
+        <a class="proj-link" href="https://assistenciatecnicapaiefilho.com" target="_blank" rel="noopener">
+          assistenciatecnicapaiefilho.com <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Veneto Indica -->
+    <div class="proj-card reveal">
+      <div class="proj-thumb thumb-green">
+        <span class="proj-thumb-icon">🏘️</span>
+      </div>
+      <div class="proj-body">
+        <span class="proj-tag tag-orange">Catálogo de Serviços</span>
+        <h3>Veneto Indica</h3>
+        <p>Plataforma de indicação de serviços para moradores do condomínio Villa Veneto. Reúne prestadores de confiança da comunidade em um catálogo digital acessível e fácil de navegar.</p>
+        <a class="proj-link link-orange" href="https://venetoindica.site" target="_blank" rel="noopener">
+          venetoindica.site <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Transfiro -->
+    <div class="proj-card reveal">
+      <div class="proj-thumb thumb-purple">
+        <span class="proj-thumb-icon">📤</span>
+      </div>
+      <div class="proj-body">
+        <span class="proj-tag tag-purple">Aplicação Self-Hosted</span>
+        <h3>Transfiro</h3>
+        <p>Aplicação web de transferência de arquivos hospedada em servidor próprio (VM Debian). Alternativa segura e privada às soluções de nuvem de terceiros, com interface limpa e links temporários.</p>
+        <a class="proj-link link-purple" href="https://transfiro.online" target="_blank" rel="noopener">
+          transfiro.online <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -716,7 +861,8 @@
       <a href="#empresas">Empresas</a>
       <a href="#planos">Planos</a>
       <a href="#depoimentos">Depoimentos</a>
-      <a href="#pessoal">Residencial</a>
+      <a href="#pessoal">Casa & Família</a>
+      <a href="#projetos">Projetos</a>
       <a href="https://wa.me/5531973595240" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
